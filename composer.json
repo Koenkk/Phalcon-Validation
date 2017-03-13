@@ -1,6 +1,6 @@
 {
     "name": "BasilFX/Phalcon-Validation",
-    "description": "Additional Validation for the Phalcon Framework.",
+    "description": "Additional validators for the Phalcon Framework.",
     "license": "MIT",
     "authors": [
         {

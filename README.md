@@ -11,7 +11,7 @@ This package provides additional validators for the Phalcon Framework. Currently
 * Phalcon Framework 3.0 or later.
 
 ## Installation
-Install this dependency using `composer require basilfx/phalcon-Validation`.
+Install this dependency using `composer require basilfx/phalcon-validation`.
 
 ## License
 See the `LICENSE` file (MIT license).
