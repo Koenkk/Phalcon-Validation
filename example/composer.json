@@ -1,0 +1,5 @@
+{
+    "require": {
+        "BasilFX/Phalcon-Validation": "*"
+    }
+}
