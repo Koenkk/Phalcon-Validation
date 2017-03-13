@@ -1,0 +1,24 @@
+{
+    "name": "BasilFX/Phalcon-Validation",
+    "description": "Additional Validation for the Phalcon Framework.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bas Stottelaar",
+            "email": "basstottelaar@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "ext-phalcon": "~3.0",
+        "justinrainbow/json-schema": "^4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "BasilFX\\Validation\\": "src"
+        }
+    }
+}
