@@ -2,8 +2,8 @@
 
 namespace BasilFX\Validation\Validator;
 
-use Phalcon\Validation;
-use Phalcon\Validation\Message;
+use Phalcon\Messages\Message;
+use Phalcon\Validation\AbstractValidator;
 
 use JsonSchema;
 
@@ -13,19 +13,19 @@ use JsonSchema;
  * Given a JSON-compatible data structure, validate it against the provided
  * schema. It uses the JsonSchema library for validation.
  */
-class Json extends \Phalcon\Validation\Validator
+class Json extends AbstractValidator
 {
     /**
      * @inheritdoc
      */
-    public function validate(Validation $validation, $attribute)
+    public function validate(Validation $validation, $field): bool
     {
         // Create a new JSON schema validator.
         $factory = new JsonSchema\Constraints\Factory();
         $validator = new JsonSchema\Validator($factory);
 
         $validator->check(
-            $validation->getValue($attribute),
+            $validation->getValue($field),
             (object) ["\$ref" => $this->getOption("schema")]
         );
 
@@ -41,7 +41,7 @@ class Json extends \Phalcon\Validation\Validator
             }
 
             $validation->appendMessage(
-                new Message($message, $attribute, "Json")
+                new Message($message, $field, "Json")
             );
 
             return false;
