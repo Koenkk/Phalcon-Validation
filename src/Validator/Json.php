@@ -18,7 +18,7 @@ class Json extends AbstractValidator
     /**
      * @inheritdoc
      */
-    public function validate(Validation $validation, $field): bool
+    public function validate(\Phalcon\Validation $validation, $field): bool
     {
         // Create a new JSON schema validator.
         $factory = new JsonSchema\Constraints\Factory();
