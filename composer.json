@@ -11,7 +11,7 @@
     "require": {
         "php": ">=7.2.0",
         "ext-phalcon": "~4.0",
-        "justinrainbow/json-schema": "^4.0"
+        "justinrainbow/json-schema": "^5.0"
     },
     "require-dev": {
         "phpunit/phpunit": "@stable"
